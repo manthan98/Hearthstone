@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8270441320C2194F00F73B63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270441220C2194F00F73B63 /* AppDelegate.swift */; };
-		8270441520C2194F00F73B63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270441420C2194F00F73B63 /* ViewController.swift */; };
+		8270441520C2194F00F73B63 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270441420C2194F00F73B63 /* MainViewController.swift */; };
 		8270441820C2194F00F73B63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8270441620C2194F00F73B63 /* Main.storyboard */; };
 		8270441A20C2195100F73B63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8270441920C2195100F73B63 /* Assets.xcassets */; };
 		8270441D20C2195100F73B63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8270441B20C2195100F73B63 /* LaunchScreen.storyboard */; };
@@ -17,6 +17,7 @@
 		8270444120C2197000F73B63 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270444020C2197000F73B63 /* DataService.swift */; };
 		8270444320C2198900F73B63 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270444220C2198900F73B63 /* Card.swift */; };
 		8270444720C21A8000F73B63 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270444620C21A8000F73B63 /* CardCell.swift */; };
+		8270445120C23A0D00F73B63 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270445020C23A0D00F73B63 /* UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,7 @@
 /* Begin PBXFileReference section */
 		8270440F20C2194F00F73B63 /* Hearthstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hearthstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8270441220C2194F00F73B63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8270441420C2194F00F73B63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8270441420C2194F00F73B63 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8270441720C2194F00F73B63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8270441920C2195100F73B63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8270441C20C2195100F73B63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +54,7 @@
 		8270444020C2197000F73B63 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		8270444220C2198900F73B63 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		8270444620C21A8000F73B63 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		8270445020C23A0D00F73B63 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +139,7 @@
 		8270444820C21AFE00F73B63 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8270441420C2194F00F73B63 /* ViewController.swift */,
+				8270441420C2194F00F73B63 /* MainViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				8270444020C2197000F73B63 /* DataService.swift */,
+				8270445020C23A0D00F73B63 /* UIImage.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -299,7 +302,8 @@
 			files = (
 				8270444720C21A8000F73B63 /* CardCell.swift in Sources */,
 				8270444120C2197000F73B63 /* DataService.swift in Sources */,
-				8270441520C2194F00F73B63 /* ViewController.swift in Sources */,
+				8270441520C2194F00F73B63 /* MainViewController.swift in Sources */,
+				8270445120C23A0D00F73B63 /* UIImage.swift in Sources */,
 				8270441320C2194F00F73B63 /* AppDelegate.swift in Sources */,
 				8270444320C2198900F73B63 /* Card.swift in Sources */,
 			);

@@ -16,27 +16,29 @@ class CardCell: UICollectionViewCell {
     @IBOutlet weak var playerClassLabel: UILabel!
     
     public func configureCell(card: Card) {
-        // Load image async from URL in a background thread to prevent locking main thread.
-        guard let url = URL(string: card.image) else { return }
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if error != nil {
-                print("Failed fetching image:", error?.localizedDescription)
-                return
+        if (card.image == "no image") {
+            self.imageView.image = UIImage(named: "no-image")
+        } else {
+            // Load image async from URL in a background thread to prevent locking main thread.
+            guard let url = URL(string: card.image) else { return }
+            DispatchQueue.global().async { [weak self] in
+                if let data = try? Data(contentsOf: url) {
+                    if let image = UIImage(data: data) {
+                        DispatchQueue.main.async {
+                            self?.imageView.image = image
+                        }
+                    }
+                }
             }
-            
-            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                print("Not a proper HTTPURLResponse or statusCode")
-                return
-            }
-            
-            DispatchQueue.main.async {
-                self.imageView.image = UIImage(data: data!)
-            }
-        }.resume()
+        }
         
         self.nameLabel.text = card.name
         self.typeLabel.text = card.type
         self.playerClassLabel.text = card.playerClass
+        
+        self.nameLabel.textColor = UIColor.white
+        self.typeLabel.textColor = UIColor.white
+        self.playerClassLabel.textColor = UIColor.white
     }
     
 }

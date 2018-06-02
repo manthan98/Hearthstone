@@ -10,10 +10,10 @@ import Foundation
 
 class Card {
     
-    var name = ""
-    var image = ""
-    var type = ""
-    var playerClass = ""
+    var name = String()
+    var image = String()
+    var type = String()
+    var playerClass = String()
     
     static func parseCardJSON(data: Data) -> [Card] {
         
@@ -42,6 +42,8 @@ class Card {
                             
                             if let image = card["img"] as? String {
                                 newCard.image = image
+                            } else {
+                                newCard.image = "no image"
                             }
                             
                             cardsArr.append(newCard)

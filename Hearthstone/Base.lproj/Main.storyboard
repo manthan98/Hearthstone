@@ -10,17 +10,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Hearthstone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Hearthstone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="G8H-ky-l1F">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="G8H-ky-l1F">
+                                <rect key="frame" x="0.0" y="100" width="375" height="712"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="V2x-EX-uDh">
                                     <size key="itemSize" width="170" height="244"/>
@@ -94,12 +93,29 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="y0u-WQ-s9z">
+                                <rect key="frame" x="0.0" y="44" width="375" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="goy-3X-YU3"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="G8H-ky-l1F" firstAttribute="top" secondItem="y0u-WQ-s9z" secondAttribute="bottom" id="4u7-Sg-bQc"/>
+                            <constraint firstItem="G8H-ky-l1F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Txd-Hc-rDk"/>
+                            <constraint firstAttribute="bottom" secondItem="G8H-ky-l1F" secondAttribute="bottom" id="Y29-Na-j9P"/>
+                            <constraint firstItem="y0u-WQ-s9z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="e9o-ND-bD8"/>
+                            <constraint firstItem="y0u-WQ-s9z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hJR-WH-FJ8"/>
+                            <constraint firstItem="G8H-ky-l1F" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lWk-ld-5GP"/>
+                            <constraint firstItem="y0u-WQ-s9z" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uAs-cL-8Xm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="G8H-ky-l1F" id="Bx8-3y-rSr"/>
+                        <outlet property="searchBar" destination="y0u-WQ-s9z" id="oD6-xA-etH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
