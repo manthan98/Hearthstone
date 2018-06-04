@@ -18,6 +18,7 @@
 		8270444320C2198900F73B63 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270444220C2198900F73B63 /* Card.swift */; };
 		8270444720C21A8000F73B63 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270444620C21A8000F73B63 /* CardCell.swift */; };
 		8270445120C23A0D00F73B63 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270445020C23A0D00F73B63 /* UIImage.swift */; };
+		828B757720C50E31006754A5 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828B757620C50E31006754A5 /* UIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		8270444220C2198900F73B63 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		8270444620C21A8000F73B63 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		8270445020C23A0D00F73B63 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		828B757620C50E31006754A5 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 			children = (
 				8270444020C2197000F73B63 /* DataService.swift */,
 				8270445020C23A0D00F73B63 /* UIImage.swift */,
+				828B757620C50E31006754A5 /* UIImageView.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			files = (
 				8270444720C21A8000F73B63 /* CardCell.swift in Sources */,
 				8270444120C2197000F73B63 /* DataService.swift in Sources */,
+				828B757720C50E31006754A5 /* UIImageView.swift in Sources */,
 				8270441520C2194F00F73B63 /* MainViewController.swift in Sources */,
 				8270445120C23A0D00F73B63 /* UIImage.swift in Sources */,
 				8270441320C2194F00F73B63 /* AppDelegate.swift in Sources */,

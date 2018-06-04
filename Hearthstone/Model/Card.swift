@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Card {
     
@@ -42,8 +43,6 @@ class Card {
                             
                             if let image = card["img"] as? String {
                                 newCard.image = image
-                            } else {
-                                newCard.image = "no image"
                             }
                             
                             cardsArr.append(newCard)

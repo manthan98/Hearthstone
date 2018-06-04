@@ -16,25 +16,15 @@ class CardCell: UICollectionViewCell {
     @IBOutlet weak var playerClassLabel: UILabel!
     
     public func configureCell(card: Card) {
-        if (card.image == "no image") {
-            self.imageView.image = UIImage(named: "no-image")
-        } else {
-            // Load image async from URL in a background thread to prevent locking main thread.
-            guard let url = URL(string: card.image) else { return }
-            DispatchQueue.global().async { [weak self] in
-                if let data = try? Data(contentsOf: url) {
-                    if let image = UIImage(data: data) {
-                        DispatchQueue.main.async {
-                            self?.imageView.image = image
-                        }
-                    }
-                }
-            }
-        }
-        
         self.nameLabel.text = card.name
         self.typeLabel.text = card.type
         self.playerClassLabel.text = card.playerClass
+        
+        if (card.image != "") {
+            self.imageView.imageFromServerURL(urlString: card.image)
+        } else {
+            self.imageView.image = UIImage(named: "no-image")
+        }
         
         self.nameLabel.textColor = UIColor.white
         self.typeLabel.textColor = UIColor.white
